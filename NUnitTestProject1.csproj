@@ -24,4 +24,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Test cases\" />
+  </ItemGroup>
+
 </Project>

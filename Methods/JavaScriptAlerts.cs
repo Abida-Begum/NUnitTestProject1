@@ -13,16 +13,20 @@ namespace NUnitTestProject1.Methods
         {
             driver = new FirefoxDriver();
         }
+
+        // Navigating to the application
         public void StartBrowser()
         {
             driver.Navigate().GoToUrl(homeURL);
         }
 
+        // Closing the browser
         public void CloseBrowser()
         {
             driver.Close();
         }
 
+        // Click on the buttons
         public void ClickOnButtons(int buttonNumber)
         {
             var example = driver.FindElement(By.CssSelector(".example"));
@@ -30,23 +34,27 @@ namespace NUnitTestProject1.Methods
              buttons[buttonNumber].Click();
         }
 
+        // Click OK Button on the pop up
         public void ClickOKButton()
         {
            
             driver.SwitchTo().Alert().Accept();           
         }
 
+        // Click Cancel button on the pop up
         public void ClickCancelButton()
         {
             
             driver.SwitchTo().Alert().Dismiss();
         }
 
+        // Enter input on the pop up
         public void WriteOnPopUpWindow(string text)
         {
             driver.SwitchTo().Alert().SendKeys(text);
         }
 
+        // Checking the result in the result section
         public string Result()
         {
             var result = driver.FindElement(By.Id("result")).Text;

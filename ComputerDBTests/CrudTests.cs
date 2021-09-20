@@ -8,6 +8,7 @@ namespace NUnitTestProject1.ComputerDBTests
  
         private ComputerDatabaseObjects ComputerDatabaseObjects1 = new ComputerDatabaseObjects();
 
+        // Test to Add a new computer
         [Test, Order(1)]
         public void CreateRecord()
         {          
@@ -24,6 +25,7 @@ namespace NUnitTestProject1.ComputerDBTests
 
         }
 
+        //Test to Read and Write the data from the computer database table
         [Test, Order(2)]
         public void ReadAndWriteTableData()
         {
@@ -31,6 +33,7 @@ namespace NUnitTestProject1.ComputerDBTests
 
         }
 
+        //Test to update a computer
         [Test, Order(3)]
         public void UpdateRecord()
         {
@@ -44,6 +47,7 @@ namespace NUnitTestProject1.ComputerDBTests
 
         }
 
+        //Test to delete a computer
         [Test, Order(4)]
         public void DeleteRecord()
         {
@@ -53,6 +57,7 @@ namespace NUnitTestProject1.ComputerDBTests
             Assert.That(message.Contains("deleted"));
         }
 
+        //Test to navigate to next and previous page of the table
         [Test, Order(5)]
 
         public void NavigatingNextAndPreviousOnTable()
@@ -66,6 +71,7 @@ namespace NUnitTestProject1.ComputerDBTests
 
         }
 
+        //Test to check the functionality of the filter box
         [Test, Order(6)]
         public void FilterTest()
         {
@@ -74,7 +80,7 @@ namespace NUnitTestProject1.ComputerDBTests
             Assert.AreEqual(2, numberOfRows);           
         }
 
-
+        //Close the browser
         [OneTimeTearDown]
             public void OneTimeTearDown()
             {
