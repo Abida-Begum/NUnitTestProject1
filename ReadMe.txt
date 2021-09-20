@@ -6,3 +6,4 @@ NunitTestProject1
 4. Folder 'Methods' has got two classes.
     -- ComputerDatabaseObjects.cs covers functions for computer database application.
     -- JavaScriptAlerts.cs covers functions for Javascript alerts application
+5. Time taken to complete the test was around 1 day
